@@ -1,0 +1,141 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1.25">
+		<FrameLayout
+			android:id="@+id/my_surface_background"
+			android:layout_width="fill_parent"
+			android:layout_height="0dp"
+			android:layout_alignParentTop="true"
+			android:layout_above="@+id/mainActionBar"
+		>
+		</FrameLayout>
+		<View
+			android:layout_alignParentRight="true"
+			android:background="@color/primary"
+			android:elevation="5dp"
+			android:layout_height="20dp"
+			android:layout_width="fill_parent"
+
+			android:layout_gravity="bottom"
+			android:layout_alignParentBottom="true"/>
+
+		<View
+			android:id="@id/mainActionBar"
+			android:layout_alignParentLeft="true"
+			android:background="@color/primary"
+			android:elevation="5dp"
+			android:layout_height="60dp"
+			android:paddingBottom="15dp"
+			android:paddingRight = "10dp"
+			android:layout_width="25dp"
+			android:paddingVertical="5dp"
+			android:layout_gravity="bottom"
+			android:layout_alignParentBottom="true"
+			android:weightSum="1.25"
+		/>
+		<com.tmstudios.paperboard.ui.FloatingActionButton
+			android:layout_width="45dp"
+			android:layout_height="45dp"
+			android:id="@+id/mainFab"
+			android:src="@drawable/ic_add_black_36dp"
+			android:background="@color/secondary"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentBottom="true"
+			android:layout_marginLeft="30dp"
+			android:layout_marginBottom="25dp"
+			android:layout_marginRight="5dp"
+			android:elevation="9dp"
+			android:onClick="addLayer"/>
+			
+		<LinearLayout
+			android:id="@id/mainActionBar"
+			android:layout_toRightOf="@id/mainFab"
+			android:layout_alignParentRight="true"
+			android:background="@color/primary"
+			android:elevation="5dp"
+			android:layout_height="60dp"
+			android:paddingBottom="15dp"
+			android:paddingRight = "10dp"
+			android:layout_width="0dp"
+			android:paddingVertical="5dp"
+			android:layout_gravity="bottom"
+			android:layout_alignParentBottom="true"
+			android:weightSum="1.25"
+		>
+		
+
+			<ImageButton
+				android:src="@drawable/ic_movie_creation_black_24dp"
+				android:id="@+id/main_btn_open_configView"
+				style="@style/CircleButton"
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="0.25"
+				android:onClick="openVideoView"
+			/>
+
+			<ImageButton
+				android:src="@drawable/ic_zoom_out_map_black_36dp"
+				android:id="@+id/scrollMode"
+				android:onClick="enterScrollMode"
+				style="@style/CircleButton"
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="0.25"/>
+			<ImageButton
+				android:src="@drawable/ic_select"
+				android:id="@+id/select"
+				android:onClick="enterSelectMode"
+				style="@style/CircleButton"
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="0.25"/>
+
+			<ImageButton
+				android:src="@drawable/ic_undo_black_36dp"
+				style="@style/CircleButton"
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="0.25"
+			/>
+
+			<ImageButton
+				android:src="@drawable/ic_redo_black_36dp"
+				style="@style/CircleButton"
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="0.25"
+			/>
+				
+			</LinearLayout>
+		<TableLayout 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_above="@id/mainActionBar"
+			android:layout_alignLeft="@id/mainActionBar"
+			android:id="@+id/mainVideoView"
+			android:visibility="invisible"
+			android:background="@drawable/curved_rect_top"
+			android:orientation="vertical">
+			<include 
+				layout="@layout/movie_menu"/>
+		</TableLayout>
+	</RelativeLayout>
+		
+		
+	<LinearLayout
+		android:id="@+id/config"
+		android:layout_width="100dp"
+		android:background="@drawable/curved_rect_right"
+		android:elevation="5dp"
+		android:layout_gravity="left|center_vertical"
+		android:layout_height="wrap_content"
+		android:padding="5dp">
+	</LinearLayout>
+</android.support.v4.widget.DrawerLayout >

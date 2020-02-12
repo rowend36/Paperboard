@@ -1,0 +1,107 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="300dp"
+	android:layout_marginBottom="10dp"
+	android:fillViewport="false">
+
+<LinearLayout 
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_height="60dp"
+			android:layout_width="fill_parent"
+			android:orientation="vertical"
+			android:layout_margin="7dp"
+			android:weightSum="1"
+			android:gravity="center">
+			<TextView
+				android:text="Style"
+				android:layout_height="20dp"
+				android:layout_width="wrap_content"/>
+			<TextView
+		   style="@style/config_textView"
+				android:id="@+id/doodle_configPencilType"
+				android:layout_weight="1"
+				android:text="Default"
+				android:layout_height="0dp"
+				android:layout_marginHorizontal="5dp"
+				android:layout_width="fill_parent"/>
+		</LinearLayout>
+		
+		<View
+			android:layout_height="1dp"
+			android:layout_width="fill_parent"
+			android:background="#555555"			/>
+			
+			<LinearLayout
+			android:layout_height="60dp"
+			android:layout_width="fill_parent"
+			android:orientation="vertical"
+			android:weightSum="1"
+			android:layout_margin="7dp"
+			android:gravity="center">
+			<TextView
+				android:text="Size"
+				android:layout_height="20dp"
+				android:layout_width="wrap_content"/>
+			<TextView
+		   style="@style/config_textView"
+				android:id="@+id/doodle_configStrokeWidth"
+				android:text="14"
+				android:layout_weight="1"
+				android:layout_height="0dp"
+				android:layout_width="30dp"/>
+		</LinearLayout>
+		
+		<View
+			android:layout_height="1dp"
+			android:layout_width="fill_parent"
+			android:background="#555555"		/>
+			
+		<LinearLayout
+			android:layout_height="60dp"
+			android:layout_width="fill_parent"
+			android:orientation="vertical"
+			android:weightSum="1"
+			android:gravity="center"
+			android:layout_margin="7dp">
+			<TextView
+				android:text="Opacity"
+				android:layout_height="20dp"
+				android:layout_width="wrap_content"/>
+			<View
+				android:id="@+id/doodle_configStrokePreview"
+				android:layout_weight="1"
+				android:layout_height="0dp"
+				android:layout_width="30dp"/>
+		</LinearLayout>
+		
+	<View
+		android:layout_height="1dp"
+		android:layout_width="fill_parent"
+		android:background="#555555"
+		/>	
+		
+	<LinearLayout
+			android:layout_height="60dp"
+			android:layout_width="fill_parent"
+			android:orientation="vertical"
+			android:weightSum="1"
+			android:gravity="center"
+			android:layout_margin="7dp">
+			<TextView
+			 
+				android:text="Color"
+				android:layout_height="20dp"
+				android:layout_width="wrap_content"/>
+			<View
+				android:id="@+id/doodle_configStrokeColor"
+				android:layout_weight="1"
+				android:layout_height="0dp"
+				android:layout_width="30dp"/>
+		</LinearLayout>
+</LinearLayout>
+
+</ScrollView>

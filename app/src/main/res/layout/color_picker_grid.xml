@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+	android:visibility="visible"
+	android:weightSum="4"
+	android:gravity="fill_vertical"
+	android:padding="10dp"
+    android:orientation="vertical">
+    <TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textColor="#000000"
+		android:textSize="15sp"
+
+		android:text="Recent..."/>
+	<View
+		android:layout_margin="5dp"
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="@color/primary"/>
+	<GridView
+		android:id="@+id/color_gridRecent"
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/color_grid_size"
+		android:layout_weight="1"
+		android:numColumns="auto_fit"
+		android:gravity="center"
+		android:layout_margin="5dp"
+		android:layout_marginBottom="20dp"
+		android:padding="5dp"
+		android:choiceMode="singleChoice"
+		android:columnWidth="@dimen/color_grid_size"
+		android:verticalSpacing="2dp"
+		android:listSelector="@drawable/curved_rect_transparent"
+		android:drawSelectorOnTop="true"
+		android:horizontalSpacing="5dp"
+		/>
+	
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textColor="#000000"
+		android:textSize="15sp"
+		android:text="My Library"/>
+	<View
+		android:layout_margin="5dp"
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="@color/primary"/>
+	<GridView
+		android:id="@+id/color_gridLibrary"
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/color_grid_size"
+		android:layout_weight="1"
+		android:numColumns="auto_fit"
+		android:gravity="center"
+		android:layout_margin="5dp"
+		android:layout_marginBottom="20dp"
+		android:padding="5dp"
+		android:choiceMode="singleChoice"
+		android:columnWidth="@dimen/color_grid_size"
+		android:verticalSpacing="2dp"
+		android:drawSelectorOnTop="true"
+		android:listSelector="@drawable/curved_rect_transparent"
+		android:horizontalSpacing="5dp"
+	/>
+
+	
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="#ff0000"/>
+	
+</LinearLayout>

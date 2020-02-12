@@ -1,0 +1,48 @@
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+	
+
+	<TableRow
+		android:layout_height="35dp"
+		android:onClick="pauseRecording"
+		android:layout_width="wrap_content"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:layout_weight="0.25">
+	<ImageButton
+		android:src="@drawable/design_play_pause"
+		android:id="@+id/pauseRecord"
+		style="@style/CircleButton"
+		android:layout_width="35dp"
+		android:layout_height="35dp"
+	/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:text="Pause Recording"
+			android:gravity="center"/>
+	</TableRow>
+
+	<TableRow
+		android:layout_height="35dp"
+		android:onClick="startRecording"
+		android:layout_width="wrap_content"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:layout_weight="0.25">
+	<ImageButton
+		android:src="@drawable/design_stop_record"
+		android:id="@+id/startRecord"
+		style="@style/CircleButton"
+		android:layout_width="35dp"
+		android:layout_height="35dp"
+		/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:text="Start Recording"
+			android:gravity="center"/>
+	</TableRow>
+</merge>
